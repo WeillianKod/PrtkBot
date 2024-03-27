@@ -1,0 +1,48 @@
+from bset import settings
+import discord
+from blogic import *
+
+# Variabel intents menyimpan hak istimewa bot
+intents = discord.Intents.default()
+# Mengaktifkan hak istimewa message-reading
+intents.message_content = True
+# Membuat bot di variabel klien dan mentransfernya hak istimewa
+client = discord.Client(intents=intents)
+
+
+@client.event
+async def on_ready():
+    print(f'Kita telah masuk sebagai {client.user}')
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+    if message.content.startswith('$halo'):
+        await message.channel.send("Hi!")
+    elif message.content.startswith('$senyum'):
+        await message.channel.send(gen_emodji())
+    elif message.content.startswith('$koin'):
+        await message.channel.send(flip_coin())
+    elif message.content.startswith('$pass'):
+        await message.channel.send(gen_pass(10))
+    elif message.content.startswith('$ide'):
+        await message.channel.send("Ya! Baiklah. Beberapa ide yang mungkin menarik:")
+        await message.channel.send("1) Mendaur ulang plastik")
+        await message.channel.send("2) Mengurangi plastik")
+        await message.channel.send("3) Menggantikan plastik")
+    elif message.content.startswith('$penjelasan 1'):
+        await message.channel.send("Memanfaatkan kembali sampah setelah mengalami proses pengolahan.")
+        await message.channel.send("Kamu bisa menggunakan botol plastik bekas untuk membuat patung, pot tanaman, tempat pensil, dan banyak hal lain!")
+        await message.channel.send("Bisa juga dengan kertas bekas dijadikan karya lipat.")
+    elif message.content.startswith('$penjelasan 2'):
+        await message.channel.send("...")
+        await message.channel.send("Mana tau lah")
+        await message.channel.send("Cari google aja atuh")
+    elif message.content.startswith('$penjelasan 3'):
+        await message.channel.send("...")
+        await message.channel.send("Kamu nanyea?")
+        await message.channel.send("Pikir sendiri lah")
+
+
+client.run(settings["TOKEN"])
