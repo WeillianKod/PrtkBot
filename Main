@@ -28,9 +28,9 @@ async def on_message(message):
         await message.channel.send(gen_pass(10))
     elif message.content.startswith('$ide'):
         await message.channel.send("Ya! Baiklah. Beberapa ide yang mungkin menarik:")
-        await message.channel.send("1) Mendaur ulang plastik")
-        await message.channel.send("2) Mengurangi plastik")
-        await message.channel.send("3) Menggantikan plastik")
+        await message.channel.send("1) Recycle, Mendaur ulang plastik")
+        await message.channel.send("2) Reduce, Mengurangi plastik")
+        await message.channel.send("3) Reuse, menggunakan ulang plastik")
     elif message.content.startswith('$penjelasan 1'):
         await message.channel.send("Memanfaatkan kembali sampah setelah mengalami proses pengolahan.")
         await message.channel.send("Kamu bisa menggunakan botol plastik bekas untuk membuat patung, pot tanaman, tempat pensil, dan banyak hal lain!")
