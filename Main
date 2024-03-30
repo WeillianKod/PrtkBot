@@ -36,13 +36,17 @@ async def on_message(message):
         await message.channel.send("Kamu bisa menggunakan botol plastik bekas untuk membuat patung, pot tanaman, tempat pensil, dan banyak hal lain!")
         await message.channel.send("Bisa juga dengan kertas bekas dijadikan karya lipat.")
     elif message.content.startswith('$penjelasan 2'):
-        await message.channel.send("...")
-        await message.channel.send("Mana tau lah")
-        await message.channel.send("Cari google aja atuh")
+        await message.channel.send("Penggunaan plastik selama beberapa dekade ini terus meningkat, dan aku yakin kamu pasti tidak mau menjadi salah satu penyumbang sampah plastik itu.")
+        await message.channel.send("Jadi ini lah beberapa cara yang bisa kamu lakukan agar dapat mengurangi penggunaan sampah plastik:")
+        await message.channel.send("A) Menggunakan kantong belanja sendiri seperti shopper bag/degradeable plastic, Kantong plastik memang lebih praktis tapi hal ini lah yang membuat sampah plastik menjadi semakin menumpuk.")
+        await message.channel.send("B) Membawa tumbler")
+        await message.channel.send("C) Tidak menggunakan sedotan plastik")
+        await message.channel.send("D) Hindari membeli makanan dan minuman menggunakan wada berbahan plastik")
     elif message.content.startswith('$penjelasan 3'):
-        await message.channel.send("...")
-        await message.channel.send("Kamu nanyea?")
-        await message.channel.send("Pikir sendiri lah")
+        await message.channel.send("Penggunaan ulang plastik mengacu pada praktik memanfaatkan kembali produk-produk plastik yang sudah ada, seperti botol atau kantong, untuk tujuan lain setelah mereka diproses. Hal ini membantu mengurangi limbah plastik dan mengurangi tekanan terhadap lingkungan.")
+        await message.channel.send("Beberapa contoh penggunaan ulang plastik:")
+        await message.channel.send("A) Menggunakan kembali botol atau kantong plastik untuk menyimpan makanan atau barang-barang kecil di rumah.")
+        await message.channel.send("B) Melakukan refill atau isi ulang botol-botol plastik dengan air minum untuk mengurangi penggunaan botol plastik sekali pakai.")
 
 
 client.run(settings["TOKEN"])
